@@ -18,6 +18,9 @@ before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t sano2019/react-test -f ./client/Dockerfile.dev ./client
 
+script:
+  - docker run -e CI=true sano2019/react-test npm test
+  
 deploy:
   provider: script
   script: bash ./deploy.sh
