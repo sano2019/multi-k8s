@@ -1,3 +1,4 @@
+
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
@@ -18,7 +19,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            Learn React Change
           </a>
           <Link to="/">Home</Link>
           <Link to="/otherpage">Other Page</Link>
