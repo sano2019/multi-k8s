@@ -18,7 +18,7 @@ before_install:
   - docker build -t sano2019/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true sano2019/react-test npm test
+  - docker run sano2019/react-test npm test -- --coverage
 
 deploy:
   provider: script
