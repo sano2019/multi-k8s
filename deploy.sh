@@ -12,5 +12,5 @@ docker push sano2019/multi-worker:$SHA
 
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=sano2019/multi-server:$SHA
-kubectl set image deployments/client-deployment client=sano2019/multi-client:$SHA
+kubectl set image deployments/client-deployment client=stephengrider/multi-client:latest
 kubectl set image deployments/worker-deployment worker=sano2019/multi-worker:$SHA
